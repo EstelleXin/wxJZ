@@ -1,21 +1,132 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
-}
+.container .main {
+  height: 100%;
+  width: 100%;
+  flex: 1; }
+  .container .main swiper, .container .main swiper-item {
+    width: 100%; }
+  .container .main #headerSwiper {
+    width: 100%;
+    height: 100%; }
+    .container .main #headerSwiper .nav {
+      width: 100%;
+      height: 66rpx;
+      border-bottom: 1rpx solid #acacac;
+      display: -webkit-flex;
+      justify-content: space-around;
+      align-items: center;
+      color: #8f8f8f; }
+      .container .main #headerSwiper .nav li {
+        width: 100%;
+        height: 100%;
+        display: -webkit-flex;
+        justify-content: center;
+        align-items: center; }
+      .container .main #headerSwiper .nav .liActive {
+        border-bottom: 2px solid #f7b320;
+        color: #000; }
+    .container .main #headerSwiper #navSwiper {
+      display: -webkit-flex;
+      width: 100%;
+      height: 100%; }
+      .container .main #headerSwiper #navSwiper .listviewBlock {
+        width: 100%;
+        overflow-y: auto; }
+      .container .main #headerSwiper #navSwiper swiper-item {
+        flex: 1; }
+        .container .main #headerSwiper #navSwiper swiper-item .listView {
+          height: 300rpx;
+          border-bottom: 1px solid #acacac;
+          padding: 26rpx;
+          display: -webkit-flex;
+          flex-direction: column; }
+          .container .main #headerSwiper #navSwiper swiper-item .listView .lH {
+            height: 38rpx;
+            width: 100%;
+            display: -webkit-flex;
+            justify-content: flex-start;
+            align-items: center; }
+            .container .main #headerSwiper #navSwiper swiper-item .listView .lH .answerNum {
+              width: 45rpx;
+              height: 22rpx;
+              font-size: 20rpx;
+              background: #f7b320;
+              color: #000;
+              text-align: center;
+              line-height: 22rpx; }
+            .container .main #headerSwiper #navSwiper swiper-item .listView .lH .lClassify {
+              color: #2d5090;
+              font-size: 22rpx; }
+            .container .main #headerSwiper #navSwiper swiper-item .listView .lH .lTitle {
+              font-size: 24rpx;
+              color: #7d7d7d; }
+          .container .main #headerSwiper #navSwiper swiper-item .listView .lUser {
+            width: 100%;
+            height: 60rpx;
+            display: -webkit-flex;
+            justify-content: flex-start;
+            align-items: center; }
+            .container .main #headerSwiper #navSwiper swiper-item .listView .lUser image {
+              width: 45rpx;
+              height: 45rpx;
+              border-radius: 50%; }
+            .container .main #headerSwiper #navSwiper swiper-item .listView .lUser text {
+              padding-left: 25rpx;
+              color: #2d5090;
+              font-size: 28rpx; }
+          .container .main #headerSwiper #navSwiper swiper-item .listView .lSection {
+            flex: 1;
+            padding: 5rpx;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-around;
+            align-items: center; }
+            .container .main #headerSwiper #navSwiper swiper-item .listView .lSection text {
+              font-size: 30rpx;
+              color: #000;
+              line-height: 34rpx;
+              display: -webkit-box;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+              text-overflow: ellipsis;
+              overflow: hidden; }
+          .container .main #headerSwiper #navSwiper swiper-item .listView .lSetting {
+            width: 100%;
+            height: 44rpx;
+            display: -webkit-flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row; }
+            .container .main #headerSwiper #navSwiper swiper-item .listView .lSetting text {
+              color: #ccc;
+              font-size: 26rpx; }
+            .container .main #headerSwiper #navSwiper swiper-item .listView .lSetting image {
+              width: 38rpx;
+              height: 38rpx; }
+            .container .main #headerSwiper #navSwiper swiper-item .listView .lSetting .lIcon {
+              display: -webkit-flex;
+              justify-content: center;
+              align-items: center; }
+      .container .main #headerSwiper #navSwiper .attention {
+        padding: 15rpx; }
+        .container .main #headerSwiper #navSwiper .attention .atext {
+          display: -webkit-flex;
+          flex-direction: column;
+          font-size: 28rpx;
+          color: #ccc;
+          margin-bottom: 60rpx; }
+        .container .main #headerSwiper #navSwiper .attention .aicon {
+          display: -webkit-flex;
+          flex-direction: row;
+          flex-wrap: wrap; }
+          .container .main #headerSwiper #navSwiper .attention .aicon view {
+            width: 25%;
+            display: -webkit-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; }
+          .container .main #headerSwiper #navSwiper .attention .aicon image {
+            width: 75rpx;
+            height: 75rpx;
+            margin-bottom: 10rpx; }
+          .container .main #headerSwiper #navSwiper .attention .aicon text {
+            font-size: 30rpx; }

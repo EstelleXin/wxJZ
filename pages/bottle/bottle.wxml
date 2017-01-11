@@ -1,0 +1,78 @@
+<view>
+<scroll-view scroll-y="true">
+    <swiper indicator-dots="true" autoplay="true" circular="{{true}}" style="height:196rpx">
+       <swiper-item style="background:#a8f1f6">hahah</swiper-item>
+       <swiper-item style="background:#11fe65">酱知</swiper-item>
+       <swiper-item style="background:#ffb503">lallala</swiper-item>
+       <swiper-item style="background:#8179f1">祝你幸福</swiper-item>
+    </swiper>
+<!--*****************热门词条***************************************************************-->
+    <view class="jc_hot">
+        <text>热门词条</text><text>更多></text>
+    </view>
+    <view class="jc_hot_main">
+        <view class="jc_hot_image">
+            <block wx:for="{{[1,2,3]}}">
+                <view  class="jc_classify">
+                    <image src="/images/ic_{{item}}.png"></image>
+                </view>
+            </block>
+        </view>
+        <view class="jc_hot_list">
+            <view class="jc_hot_list_text" style="border-bottom:1px solid #e5e5e5;">
+                <text class="jc_titile">十二生肖</text>
+                <text class="jc_remark">你眼中的十二生肖是？</text>
+            </view> 
+            <view class="jc_hot_list_text" style="border-bottom:1px solid #e5e5e5;">
+                <text class="jc_titile">情怀</text>
+                <text class="jc_remark">最近听到最励志的话是什么？</text>
+            </view> 
+            <view class="jc_hot_list_text">
+                <text class="jc_titile">怪癖</text>
+                <text class="jc_remark">你有哪些怪癖？</text>
+            </view> 
+        </view>
+    </view>
+<!--**************用户推荐*********************************************************************-->
+     <view class="jc_hot">
+        <text>推荐用户</text>
+    </view>
+    <scroll-view scroll-x="true" style="width:100%;height:200rpx">
+        <view class="jc_user" >
+            <view wx:for="{{jc_user}}" class="jc_userInfo">
+                <image src="{{item.src}}"></image>
+                <text class="jc_userName">{{item.name}}</text>
+                <text class="jc_friends">粉丝{{item.friends}}</text>
+            </view>
+        </view>
+    </scroll-view>
+<!--**************分类*********************************************************************-->
+    <view class="jc_hot">
+        <text>分类</text>
+    </view>
+    <view class="jc_hot_main">
+        <view class="jc_hot_image">
+            <block wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12,13]}}">
+                <view  class="jc_classify">
+                    <image src="/images/jc_classify_{{item}}.png"></image>
+                </view>
+            </block>
+        </view>
+        <view class="jc_hot_list">
+            <block wx:for="{{jc_classify_cont}}">
+                 <view class="jc_hot_list_text" style="border-bottom:1px solid #e5e5e5;">
+                    <view>
+                         <text class="jc_titile"> {{item.title}} </text>
+                         <text class="jc_remark"> | {{item.remark}} </text>
+                    </view>
+                    <view>
+                         <text wx:for="{{item.label}}" wx:for-item="label" class="jc_label">{{label}}</text>
+                    </view>
+                 </view> 
+            </block>
+        </view>
+    </view>
+    
+
+</scroll-view>
+</view>

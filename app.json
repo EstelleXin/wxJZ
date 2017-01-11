@@ -1,12 +1,48 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+   "pages/good/good",
+    "pages/bottle/bottle",
+    "pages/mine/mine",
+    "pages/detail/detail" ,
+    "pages/logs/logs" 
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "403835",
+    "navigationBarTitleText": "尝鲜",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar":{
+    "color":"#9b9794",
+    "selectedColor":"#Fdd63D",
+    "backgroundColor":"#fff",
+    "borderStyle":"#acacac",
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "text":"尝鲜",
+        "iconPath":"images/btn_changxian.png",
+        "selectedIconPath":"images/btn_changxian_f.png"
+      },
+      {
+        "pagePath":"pages/bottle/bottle",
+        "text":"酱厂",
+        "iconPath":"images/btn_jiangchang.png",
+        "selectedIconPath":"images/btn_jiangchang_f.png"
+      },
+       {
+        "pagePath":"pages/good/good",
+        "text":"每日一蘸",
+        "iconPath":"images/btn_meiriyizhan.png",
+        "selectedIconPath":"images/btn_meiriyizhan_f.png"
+      },
+       {
+        "pagePath":"pages/mine/mine",
+        "text":"我的",
+        "iconPath":"images/btn_me.png",
+        "selectedIconPath":"images/btn_me_f.png"
+      }
+    ]
   }
 }

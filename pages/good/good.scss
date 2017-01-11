@@ -1,0 +1,73 @@
+.zhan_wq{
+    width:100%;
+    height:160rpx;
+    background:#1b1a18;
+    color:#fff;
+}
+.z_info{
+    width:100%;
+    height:46rpx;
+    border-bottom:1px solid #e5e5e5;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    flex-direction: row;
+    padding:8rpx;
+    text{
+        font-size:22rpx;
+        margin-right:20rpx;
+    }
+}
+.jzList{
+    width:100%;
+    display:-webkit-flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding:20rpx;
+    .j_title{
+        width:100%;
+        height:70rpx;
+        display: -webkit-flex;
+        justify-content: flex-start;
+        align-items: center;
+        text{
+            font-size:30rpx;
+            font-weight: bold;
+        }
+    }
+    .j_author{
+        width:100%;
+        height:44rpx;
+        display: -webkit-flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 14rpx;
+        .j_a{
+            display:-webkit-flex;
+            justify-content: flex-start;
+            align-items: center;
+
+        }
+        image{
+            width:50rpx;
+            height:50rpx;
+            margin-right:20rpx;
+        }
+        text{
+            font-size:26rpx;
+            color:#405e9a;
+        }
+        .j_zhan{
+            color:#808080;
+        }
+    }
+    .j_cont{
+      
+        height:auto;
+        font-size:28rpx;
+        display: flex;
+        flex-wrap: wrap;
+        color:#808080;
+        margin-left:70rpx;
+        box-sizing: border-box;
+    }
+}
