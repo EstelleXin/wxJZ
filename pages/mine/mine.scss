@@ -1,0 +1,191 @@
+.mine{
+    width:100%;
+    height:100%;
+    display: -webkit-flex;
+    flex-direction: column;
+    .m_top{
+        width:100%;
+    
+        background:#fff;
+        padding:46rpx;
+        box-sizing:border-box;
+        .m_headIcon{
+            width:100%;
+            height:310rpx;
+            display: -webkit-flex;
+            justify-content: center;
+            align-items: center;
+            position:relative;
+            image{
+                width:166rpx;
+                height:166rpx;
+                border-radius:50%;
+            }
+        }
+        .m_sign{
+            width:80rpx;
+            display: -webkit-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+            position:absolute;
+            top:0;
+            right:0;
+            image{
+                width:38rpx;
+                height:38rpx;
+            }
+            text{
+                margin-top:20rpx;
+                font-size:18rpx;
+                color:#757575;
+            }
+        }
+        .m_attr{
+            width:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position:absolute;
+            left:0;
+            top:216rpx;
+            text{
+            background:#ffd727;
+            border-radius:10rpx;
+            padding:10rpx;
+            box-sizing: border-box;
+            font-size:20rpx;
+            margin-right:5rpx;
+            color:#6a0a0b;
+            }
+            .m_attr_r{
+                background: #fe6e6d;
+                color:#fff;
+            }
+            
+        }
+        .m_h_cont{
+            width:100%;
+            display: -webkit-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .m_name{
+                font-size:22rpx;
+                color:#000;
+                font-weight:bold;
+            }
+            .m_fans{
+                display:-webkit-flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding:20rpx;
+                box-sizing:border-box;
+                font-size:22rpx;
+                color:#757575;
+                .black{
+                    color:#000;
+                    font-size:24rpx;
+                    margin-right:10rpx;
+                }
+            }
+            .m_intro{
+                font-size:24rpx;
+                color:#7a7a7a;
+            }
+        }
+        .m_h_cxt{
+            width:100%;
+            display: -webkit-flex;
+            flex-direction: row;
+            justify-content:space-around;
+            align-items:center;
+            .m_cxt_list{
+                display:-webkit-flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items:center;
+                text{
+                    font-size:26rpx;
+                    color:#7a7a7a;
+                    margin-top:22rpx;
+                }
+            }
+        }
+    }
+
+    .m_time{
+        flex:1;
+        border-top:1px solid #e5e5e5;
+        background:#fff;
+        box-sizing:border-box;
+        padding:26rpx;
+        .m_t_list{
+            width:100%;
+            display: -webkit-flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+            position:relative;
+            .m_list_time{
+                width:58rpx;
+                font-size:18rpx;
+                text-align: left;
+                margin-top:20rpx;
+            }
+            .m_roller{
+                width:45rpx;
+                font-size:20rpx;
+                line-height:60rpx;
+                z-index:999;
+                margin-left:-1rpx;
+                ::before{
+                    content:'';
+                    position:absolute;
+                    top:26rpx;
+                    left:59rpx;
+                    height:100%;
+                    width:3rpx;
+                    background:#ffd727;
+                    z-index: -1;
+                }
+                .m_cir{
+                    width:20rpx;
+                    height:20rpx;
+                    border-radius: 50%;
+                   
+                  
+                    image{
+                        width:15rpx;
+                        height:15rpx;
+                    }
+                }
+            }
+                .m_right_cont{
+                    width:600rpx;
+                    border:1px solid #e5e5e5;
+                    border-radius: 10rpx;
+                    padding:20rpx;
+                    margin-bottom:26rpx;
+                    position:relative;
+                    font-size:26rpx;
+                    .m_r_cont_title{
+    
+                        .m_blue{
+                            color:#2d4c8f;
+                        }
+                    }
+                    image{
+                        width:15rpx;
+                        height:22rpx;
+                        position:absolute;
+                        top:18rpx;
+                        left:-12rpx;
+                    }
+                 }
+
+        }
+    }
+
+}

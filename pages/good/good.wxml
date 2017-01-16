@@ -1,3 +1,4 @@
+<import src="../templates/gList"/>
 <view class="zhan_wq" wx:if="{{g_flag == ture}}">
     <text>往期</text>
 </view>
@@ -6,19 +7,4 @@
 <view class="z_info">
     <text wx:for="{{z_info}}" >{{item}}</text>
 </view>
-
-<view class="jzList" >
-    <view class="j_title">
-         <text>你眼中的烂片是？</text>
-    </view>
-    <view class="j_author">
-        <view class="j_a">
-            <image src="/images/ic_look_at_picture.png">头像</image>
-            <text>叽里咕噜稀里糊涂</text>
-        </view>
-        <text class="j_zhan">9次蘸</text>
-    </view>
-    <view class="j_cont">
-        <text>看完感觉为自己所化基地及覅二级你哦而房间诶我房间诶发金额我</text>
-    </view>
-</view>
+<template is="good_listView" data="{{gList}}"></template>

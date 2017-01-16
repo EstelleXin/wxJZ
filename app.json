@@ -1,9 +1,11 @@
 {
   "pages":[
+      "pages/mine/mine",
+    "pages/good/good",
     "pages/index/index",
-   "pages/good/good",
+  
     "pages/bottle/bottle",
-    "pages/mine/mine",
+  
     "pages/detail/detail" ,
     "pages/logs/logs" 
   ],

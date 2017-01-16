@@ -1,0 +1,22 @@
+<template name ="good_listView">
+    <block wx:for="{{gList}}" wx:key="{{index}}">
+        <navigator url="../detail/detail?id={{index}}" open-type="navigate">
+        <view class="jzList" >
+            <view class="j_title">
+                <text>{{item.year}}那一年的今天</text>
+            </view>
+            <view class="j_author">
+                <view class="j_a">
+                    <image src="/images/ic_look_at_picture.png">头像</image>
+                    <text>{{item.title}}</text>
+                </view>
+                <text class="j_zhan">{{item.day}}次蘸</text>
+            </view>
+            <view class="j_cont">
+                <image src="{{item.img}}"></image>
+               <!-- <text>{{item.title}}</text>-->
+            </view>
+        </view>
+         </navigator>
+    </block>
+</template>

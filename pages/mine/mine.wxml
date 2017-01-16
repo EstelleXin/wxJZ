@@ -1,3 +1,52 @@
-<view>
-    <text>我的</text>
+<view class="mine">  
+
+    <view class="m_top">
+        <view class="m_headIcon">
+            <image src="/images/ic_head.png"></image>
+            <view class="m_sign">
+                <image src="/images/ic_sign.png"></image>
+                <text>今日签到</text>
+            </view>
+            <view class="m_attr">
+                <text>一道杠</text>
+                <text class="m_attr_r">♀</text>
+            </view>
+        </view>
+        <view class="m_h_cont">
+            <text class="m_name">EstelleXin</text>
+            <view class="m_fans">
+                <text><text class="black">0</text>粉丝</text>|<text><text class="black">0</text>粉丝</text>
+            </view>
+            <text class="m_intro">大概不写简介=懒=胖</text>
+        </view>
+        <view class="m_h_cxt">
+            <view wx:for="{{mCxt}}" class="m_cxt_list">
+                <text style="color:#000;">0</text>
+                <text>{{item}}</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="m_time">
+        <view class="m_t_list">
+            
+            <text class="m_list_time">今天</text>
+            <view class="m_roller">
+                <view class="m_cir"><image src="/images/quan.png"></image></view>
+            </view>
+            <view class="m_right_cont">
+                <view class="m_r_cont_title">
+                    <text class="m_blue">[狗仔队]</text>
+                    <text>当狗仔队门槛是不是很高</text>                     
+                </view>
+                <text>neirong 当狗仔队门槛是不是很高当狗仔队门槛是不是很高当狗仔队门槛是不是很高当狗仔队门槛是不是很高</text>
+                <text>1个人回答</text>
+                <image src="/images/m_b.png"></image>
+            </view>
+          
+        </view>
+        
+    </view>
+
+
 </view>

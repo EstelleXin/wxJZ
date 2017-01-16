@@ -1,0 +1,29 @@
+<template name="iList">
+    <block wx:for="{{list}}" wx:key="{{index}}">
+    <navigator url="../detail/detail?id={{item.id}}" open-type="navigate">
+        <view class="listView">
+                <view class="lH">
+                    <text class="answerNum">{{index+1}}</text>
+                    <text class="lClassify">【开心一刻】~</text>
+                    <text class="lTitle">{{item.ct}}</text>                                    
+                </view>
+                <view class="lUser">
+                    <image src="/images/ic_qq.png" mode="{{mode}}"></image>
+                    <text>{{item.title}}</text>
+                </view>
+                <view class="lSection">
+                    <text>{{item.text}}</text>
+                </view>
+                <view class="lSetting">
+                    <view>
+                        <text>0 个评论 · 11 次蘸</text>
+                    </view>
+                    <view class="lIcon">
+                        <image src="/images/ic_comment.png" mode="scaleToFill"></image><text>评论</text>
+                        <image src="/images/ic_praise_off.png" mode="scaleToFill"></image><text>蘸</text>
+                    </view>
+                </view>
+        </view>
+        </navigator>
+        </block>
+</template>

@@ -9,13 +9,11 @@ Page({
     current:0,
     lstyle:"noBorder",
     index:0,
-    src:"/images/ic_qq.png",
     mode:'scaleToFill',
-    userName:"xinxin",
-    hidden:false,
-    hasRefesh:false,
-    hasMore:true,
-    list:[]
+    // hidden:false,
+    // hasRefesh:false,
+    hasMore:false,
+    list:[],
   },
  changes:function(e){
    this.setData({
@@ -29,6 +27,7 @@ Page({
       })
   },
   //事件处理函数
+  
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
@@ -52,19 +51,12 @@ Page({
   },
   //页面渲染完成
   onReady:function(){
+    var that = this;
     console.log("onReady");
     var that = this;
-    wx.request({
-      url:'https://hello.dev/api/v2/movie/in_theaters',
-      header:{'content-type':'json'},
-      success:function(res){
-        console.log("获取数据为")
-        console.log(res.data.subjects);
-        console.log(res);
-        that.setData({
-          list:res.data.subjects
-        })
-      }
+    ajax.get('https://www.estellexin.cn/jz/341-1',function(res){
+      that.setData({list:res.contentlist});
+      console.log(res.contentlist);
     })
   },
   //页面显示
@@ -81,13 +73,26 @@ Page({
     // })
   },
   //下拉刷新
-  pullDownRefresh:function(e){
-    console.log("pullDownRefresh");
-    console.log(e);
-  },
+  // pullDownRefresh:function(e){
+  //   console.log("pullDownRefresh");
+  //   console.log(e);
+  // },
   pullUpLoad:function(e){
     console.log("上拉加载");
-    console.log(e);
+     var that = this;
+    that.setData({
+      hasMore:true
+    });
+    ajax.get('https://www.estellexin.cn/jz/341-1',function(res){
+      that.setData({
+        list:that.data.list.concat(res.contentlist),
+        hasMore:false
+      });
+      
+   });
+  
+
+
   },
   //页面隐藏
   onHide:function(){

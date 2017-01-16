@@ -1,7 +1,15 @@
+var ajax = require('../../utils/util.ajax.js');
 Page({
   data:{
         g_flag:"flase",
-        z_info:["553期","新鲜事儿","39位酱友","44次加料","142次蘸"],        
+        z_info:["553期","新鲜事儿","39位酱友","44次加料","142次蘸"], 
+        gList:[]       
+  },
+  onPullDownRefresh:function(){
+    setTimeout(function(){
+      wx.stopPullDownRefresh();
+
+    },1000)
   },
   onLoad:function(options){
     var that = this;
@@ -10,14 +18,12 @@ Page({
         titile:'猛速追',
         icon:'loading'
     });
-    wx.request({
-        url:'https://route.showapi.com/341-3',
-        data:{
-            page:"1",
-            showapi_sign:'7a2264ee784147bdb7f28e58975ca864',
-            showapi_appid:'30503'            
-        }
+  ajax.get("https://www.estellexin.cn/jz/119-42",function(res){
+    console.log(res.list);
+    that.setData({
+      gList:res.list
     })
+  })
   },
   onReady:function(){
     // 页面渲染完成

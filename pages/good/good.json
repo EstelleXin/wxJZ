@@ -2,5 +2,6 @@
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "403835",
     "navigationBarTitleText": "每日一蘸",
-    "navigationBarTextStyle":"#fff"
+    "navigationBarTextStyle":"#fff",
+    "enablePullDownRefresh":"true"
 }

@@ -1,3 +1,4 @@
+ <import src="../templates/iList.wxml"/>
 <!--index.wxml-->
 <view class="container">
  <view class="main">
@@ -14,7 +15,7 @@
                     <loading hidden="{{hidden}}" bindchange="loadingChange">
                         翻滚吧小酱汁。。。loading
                     </loading>
-                    <scroll-view style="height:100%;width:100%;" scroll-y="true"  bindscroll="scroll" bindscrolltoupper="pullDownRefresh" bindscrolltolower="pullUpLoad">
+                    <scroll-view style="height:100%;width:100%;" scroll-y="true"  bindscroll="scroll" bindscrolltolower="pullUpLoad">
                         <view wx:if="{{hasRefesh}}" style="display:flex;flex-direction:row;align-items：center;align-self:center;justify-content:center;">
                             <icon type="waiting" size="45" /><text>刷新中</text>
                         </view>
@@ -22,42 +23,15 @@
                             <text></text>
                         </view>
                 <!--上拉刷新代码结束-->
-                 <block wx:for="{{list}}" wx:key="{{index}}">
-                    <navigator url="../detail/detail?id={{item.id}}" open-type="navigate">
-                        <view class="listView">
-                                <view class="lH">
-                                    <text class="answerNum">1</text>
-                                    <text class="lClassify">【分类】</text>
-                                    <text class="lTitle">题目</text>                                    
-                                </view>
-                                <view class="lUser">
-                                    <image src="{{src}}" mode="{{mode}}"></image>
-                                    <text>{{userName}}</text>
-                                </view>
-                                <view class="lSection">
-                                    <text>{{item.title}}</text>
-                                </view>
-                                <view class="lSetting">
-                                    <view>
-                                        <text>0 个评论 · 11 次蘸</text>
-                                    </view>
-                                    <view class="lIcon">
-                                        <image src="/images/ic_comment.png" mode="scaleToFill"></image><text>评论</text>
-                                        <image src="/images/ic_praise_off.png" mode="scaleToFill"></image><text>蘸</text>
-                                    </view>
-                                </view>
-                      </view>
-                     </navigator>
-                     </block>
-                       
-                        <!--上拉加载-->
-                            <view>
-                                <view wx:if="{{hasMore}}" style="display:flex;flex-direction:row;align-items：center;align-self:center;justify-content:center;">
-                                    <icon type="waiting" size="45"/><text>玩命加载中。。。</text>
-                                </view>
-                                <view wx:else><text>没有更多内容了</text></view>
+                    <template is="iList" data="{{list}}"></template>
+                    <!--上拉加载-->
+                        <view>
+                            <view wx:if="{{hasMore}}" style="display:flex;flex-direction:row;align-items：center;align-self:center;justify-content:center;">
+                                <icon type="waiting" size="45"/><text>玩命加载中。。。</text>
                             </view>
-                        <!--上啦加载结束-->
+                            <view wx:else><text>没有更多内容了</text></view>
+                        </view>
+                    <!--上啦加载结束-->
                     </scroll-view>
                 </swiper-item>
                 <swiper-item>新问区域</swiper-item>
