@@ -27,3 +27,65 @@
         </navigator>
         </block>
 </template>
+
+<template name="iTwo_List">
+    <block wx:for="{{question}}" wx:key="{{index}}">
+    <navigator url="../detail/detail?id={{item.id}}" open-type="navigate">
+        <view class="listView">
+                <view class="lH">
+                    <text class="answerNum">{{index+1}}</text>
+                    <text class="lClassify">【{{item.typeName}}】~</text>
+                    <text class="lTitle">{{item.influence}}</text>                                    
+                </view>
+                <view class="lUser">
+                    <image src="/images/ic_qq.png" mode="{{mode}}"></image>
+                    <text>{{item.desc}}</text>
+                </view>
+                <view class="lSection">
+                    <text>{{item.newinfo}}</text>
+                    <image src="{{item.img}}" mode="scaleToFill"></image>
+                </view>
+                <view class="lSetting">
+                    <view>
+                        <text>0 个评论 · 11 次蘸</text>
+                    </view>
+                    <view class="lIcon">
+                        <text>{{item.name}}</text>
+                    </view>
+                </view>
+        </view>
+        </navigator>
+        </block>
+</template>
+
+
+<template name="iThree_List">
+    <block wx:for="{{emotion}}" wx:key="{{index}}">
+    <navigator url="../detail/detail?id={{item.id}}" open-type="navigate">
+        <view class="listView">
+                <view class="lH">
+                    <text class="answerNum">{{index+1}}</text>
+                    <text class="lClassify">【{{item.typeName}}】~</text>
+                    <text class="lTitle">{{item.influence}}</text>                                    
+                </view>
+                <view class="lUser">
+                    <image src="/images/ic_qq.png" mode="{{mode}}"></image>
+                    <text>{{item.desc}}</text>
+                </view>
+                <view class="lSection">
+                    <text>{{item.newinfo}}</text>
+                    <image src="{{item.img}}" mode="scaleToFill"></image>
+                </view>
+                <view class="lSetting">
+                    <view>
+                        <text>0 个评论 · 11 次蘸</text>
+                    </view>
+                    <view class="lIcon">
+                        <text>{{item.name}}</text>
+                    </view>
+                </view>
+        </view>
+        </navigator>
+        </block>
+</template>
+

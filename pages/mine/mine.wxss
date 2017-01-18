@@ -142,7 +142,9 @@
         padding: 20rpx;
         margin-bottom: 26rpx;
         position: relative;
-        font-size: 26rpx; }
+        font-size: 26rpx; 
+        display: -webkit-flex;
+        flex-direction: column;}
         .mine .m_time .m_t_list .m_right_cont .m_r_cont_title .m_blue {
           color: #2d4c8f; }
         .mine .m_time .m_t_list .m_right_cont image {
@@ -151,3 +153,9 @@
           position: absolute;
           top: 18rpx;
           left: -12rpx; }
+        .mine .m_time .m_t_list .m_right_cont .m_ping{
+            font-size:18rpx;
+            color:#777777;
+            text-align: right;
+            
+        }

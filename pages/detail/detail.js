@@ -6,14 +6,14 @@ Page({
     // 页面初始化 options为页面跳转所带来的参数
     console.log(options.id);
     wx.request({
-      url:'https://hello.dev/api/v2/movie/subject/'+options.id,
+      url:'https://www.estellexin.cn/jz/254-1'+options.id,
       header:{'content-type':'json'},
       success:function(res){
         console.log(res.data);
         wx.hideNavigationBarLoading();
         //修改title
         wx.setNavigationBarTitle({
-          title:res.data.title
+         
         })
       }
     })

@@ -15,38 +15,45 @@
         <view class="m_h_cont">
             <text class="m_name">EstelleXin</text>
             <view class="m_fans">
-                <text><text class="black">0</text>粉丝</text>|<text><text class="black">0</text>粉丝</text>
+                <text><text class="black">66</text>粉丝</text>|<text><text class="black">18</text>粉丝</text>
             </view>
             <text class="m_intro">大概不写简介=懒=胖</text>
         </view>
         <view class="m_h_cxt">
             <view wx:for="{{mCxt}}" class="m_cxt_list">
-                <text style="color:#000;">0</text>
+                <text style="color:#000;">69</text>
                 <text>{{item}}</text>
             </view>
         </view>
     </view>
 
-    <view class="m_time">
-        <view class="m_t_list">
+    <view class="m_time" onReachBottom="pulluploading">
+    
+        <view class="m_t_list" wx:for="{{tCont}}">
             
-            <text class="m_list_time">今天</text>
+            <text class="m_list_time">{{item.influence}}</text>
             <view class="m_roller">
                 <view class="m_cir"><image src="/images/quan.png"></image></view>
             </view>
             <view class="m_right_cont">
                 <view class="m_r_cont_title">
-                    <text class="m_blue">[狗仔队]</text>
-                    <text>当狗仔队门槛是不是很高</text>                     
+                    <text class="m_blue">[{{item.typeName}}]</text>
+                    <text>{{item.name}}</text>                     
                 </view>
-                <text>neirong 当狗仔队门槛是不是很高当狗仔队门槛是不是很高当狗仔队门槛是不是很高当狗仔队门槛是不是很高</text>
-                <text>1个人回答</text>
+                <text>{{item.newinfo}}</text>
+                <text class="m_ping">1人酱子</text>
                 <image src="/images/m_b.png"></image>
             </view>
           
         </view>
+
+         <view>
+            <view wx:if="{{hasMore}}" style="display:flex;flex-direction:row;align-items：center;align-self:center;justify-content:center;">
+                <icon type="waiting" size="25"/><text>玩命加载中。。。</text>
+            </view>
+            
+        </view>
         
+
     </view>
-
-
 </view>

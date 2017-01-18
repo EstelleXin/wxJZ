@@ -170,6 +170,8 @@
                     margin-bottom:26rpx;
                     position:relative;
                     font-size:26rpx;
+                    display: -webkit-flex;
+                    flex-direction: column;
                     .m_r_cont_title{
     
                         .m_blue{
@@ -182,6 +184,11 @@
                         position:absolute;
                         top:18rpx;
                         left:-12rpx;
+                    }
+                    .m_ping{
+                        font-size:18rpx;
+                        color:#777777;
+                        text-align: right;
                     }
                  }
 

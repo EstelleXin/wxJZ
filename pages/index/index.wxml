@@ -4,9 +4,9 @@
  <view class="main">
     <view id="headerSwiper">
             <ul class="nav" id="navUl">
-                <li class="{{index==0 ? 'liActive':''}}" data-current="0" bindtap="changeCurrent">热答</li>
-                <li class="{{index==1 ? 'liActive':''}}" data-current="1" bindtap="changeCurrent">新问</li>
-                <li class="{{index==2 ? 'liActive':''}}" data-current="2" bindtap="changeCurrent">脑洞</li>
+                <li class="{{index==0 ? 'liActive':''}}" data-current="0" bindtap="changeCurrent">开心</li>
+                <li class="{{index==1 ? 'liActive':''}}" data-current="1" bindtap="changeCurrent">娱乐</li>
+                <li class="{{index==2 ? 'liActive':''}}" data-current="2" bindtap="changeCurrent">情感</li>
                 <li class="{{index==3 ? 'liActive':''}}" data-current="3" bindtap="changeCurrent">关注</li>
             </ul>
             <swiper id="navSwiper" current="{{current}}" bindchange="changes">
@@ -27,15 +27,19 @@
                     <!--上拉加载-->
                         <view>
                             <view wx:if="{{hasMore}}" style="display:flex;flex-direction:row;align-items：center;align-self:center;justify-content:center;">
-                                <icon type="waiting" size="45"/><text>玩命加载中。。。</text>
+                                <icon type="waiting" size="25"/><text>玩命加载中。。。</text>
                             </view>
-                            <view wx:else><text>没有更多内容了</text></view>
+                            <view wx:else><text>稍等我看看去~~</text></view>
                         </view>
                     <!--上啦加载结束-->
                     </scroll-view>
                 </swiper-item>
-                <swiper-item>新问区域</swiper-item>
-                <swiper-item>脑洞区域</swiper-item>
+                <swiper-item style="overflow-y:auto;">
+                    <template is="iTwo_List" data="{{question}}"></template>
+                </swiper-item>
+                <swiper-item style="overflow-y:auto;">
+                    <template is="iThree_List" data="{{emotion}}"></template>
+                </swiper-item>
                 <swiper-item class="attention">
                     <view class="atext">
                         <text>一个关注对象都没有，这样怎么可能有对象！</text>

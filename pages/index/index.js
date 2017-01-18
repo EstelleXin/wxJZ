@@ -14,6 +14,8 @@ Page({
     // hasRefesh:false,
     hasMore:false,
     list:[],
+    question:[],
+    emotion:[]
   },
  changes:function(e){
    this.setData({
@@ -46,6 +48,20 @@ Page({
       //更新数据
       that.setData({
         userInfo:userInfo
+      })
+    })
+  
+    ajax.indexList('https://www.estellexin.cn/jz/254-1',41,function(res){
+      console.log(res);
+      that.setData({
+        question:res
+      })
+    })
+    ajax.indexList('https://www.estellexin.cn/jz/254-1',12,function(res){
+      console.log('情感');
+      console.log(res);
+      that.setData({
+        emotion:res
       })
     })
   },
