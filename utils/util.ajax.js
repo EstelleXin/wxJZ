@@ -36,7 +36,7 @@ var ajax ={
             console.log("失败")
             },
             success:function(res){
-          
+                console.log(res);
             cb(res.data.showapi_res_body.pagebean.contentlist);
 
             }
