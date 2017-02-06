@@ -6,7 +6,7 @@ Page({
     // 页面初始化 options为页面跳转所带来的参数
     console.log(options.id);
     wx.request({
-      url:'https://www.estellexin.cn/jz/254-1'+options.id,
+      url:'https://route.showapi.com/254-1'+options.id,
       header:{'content-type':'json'},
       success:function(res){
         console.log(res.data);

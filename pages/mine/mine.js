@@ -9,7 +9,7 @@ Page({
   },
   onLoad:function(options){
     var that = this;
-    ajax.paging('https://www.estellexin.cn/jz/254-1',that.data.page,function(res){
+    ajax.paging('https://route.showapi.com/254-1',that.data.page,function(res){
         that.setData({tCont:res})
       })
   },
@@ -18,7 +18,7 @@ Page({
     that.setData({hasMore:true});
     that.data.page += 1;
     if(that.data.page<5){
-      ajax.paging('https://www.estellexin.cn/jz/254-1',that.data.page,function(res){
+      ajax.paging('https://route.showapi.com/254-1',that.data.page,function(res){
         that.setData({tCont:that.data.tCont.concat(res),hasMore:false})
       })
     }else{

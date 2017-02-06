@@ -18,7 +18,7 @@ Page({
         titile:'猛速追',
         icon:'loading'
     });
-  ajax.get("https://www.estellexin.cn/jz/119-42",function(res){
+  ajax.get("https://route.showapi.com/119-42",function(res){
     console.log(res.list);
     that.setData({
       gList:res.list

@@ -5,14 +5,15 @@
                 <view class="lH">
                     <text class="answerNum">{{index+1}}</text>
                     <text class="lClassify">【开心一刻】~</text>
-                    <text class="lTitle">{{item.ct}}</text>                                    
+                    <text class="lTitle">{{item.name}}</text>                                    
                 </view>
                 <view class="lUser">
                     <image src="/images/ic_qq.png" mode="{{mode}}"></image>
-                    <text>{{item.title}}</text>
+                    <text>{{item.desc}}</text>
                 </view>
                 <view class="lSection">
-                    <text>{{item.text}}</text>
+                    <text>{{item.newinfo}}</text>
+                    <image src="{{item.img}}"></image>
                 </view>
                 <view class="lSetting">
                     <view>

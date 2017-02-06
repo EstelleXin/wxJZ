@@ -51,13 +51,13 @@ Page({
       })
     })
   
-    ajax.indexList('https://www.estellexin.cn/jz/254-1',41,function(res){
+    ajax.indexList('https://route.showapi.com/254-1',41,function(res){
       console.log(res);
       that.setData({
         question:res
       })
     })
-    ajax.indexList('https://www.estellexin.cn/jz/254-1',12,function(res){
+    ajax.indexList('https://route.showapi.com//254-1',12,function(res){
       console.log('情感');
       console.log(res);
       that.setData({
@@ -69,10 +69,10 @@ Page({
   onReady:function(){
     var that = this;
     console.log("onReady");
-    var that = this;
-    ajax.get('https://www.estellexin.cn/jz/341-1',function(res){
-      that.setData({list:res.contentlist});
-      console.log(res.contentlist);
+    ajax.indexList('https://route.showapi.com//254-1',11,function(res){
+      that.setData({list:res});
+      console.log("搞笑");
+      console.log(res);
     })
   },
   //页面显示
@@ -99,9 +99,9 @@ Page({
     that.setData({
       hasMore:true
     });
-    ajax.get('https://www.estellexin.cn/jz/341-1',function(res){
+    ajax.indexList('https://route.showapi.com//254-1',11,function(res){
       that.setData({
-        list:that.data.list.concat(res.contentlist),
+        list:that.data.list.concat(res),
         hasMore:false
       });
       
